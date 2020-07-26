@@ -1,0 +1,101 @@
+{
+  "run_config": {
+    "num": "001",
+    // add/remove "debug" for debuging [specific settings]
+    "id": "rgb_l1_poisson_08x",
+    // tensorboard logger?!
+    "use_tb_logger": true,
+    // GPU ids to use for experiment [0,1]
+    "gpu_ids":
+    [
+      0, 1
+    ],
+    // seed to make experiment reproducible
+    //"manual_seed": "0xCAFFEE",
+    "path": {
+      "root": "/home/ivo/fahad/Projects/MPISystemMatrixRec",
+      // , "resume_state": "../experiments/debug_001_RRDB_PSNR_x4_DIV2K/training_state/200.state",
+      // path to pretrained model
+      //"pretrain_model_G": null
+      //"pretrain_model_G": "/home/ivo/fahad/Projects/MPISystemMatrixRec/experiments/sr_RRDB_PSNR_x4_SynomagPEG_RGB_002_archived_200530-110533/models/60000_G.pth"
+      //"pretrain_model_G": "/home/ivo/fahad/Projects/MPISystemMatrixRec/experiments/sr_RRDB_PSNR_x4_SynomagPEG_RGB_002_archived_200531-085921/models/36000_G.pth"
+      //"pretrain_model_G": "/home/ivo/fahad/Projects/MPISystemMatrixRec/experiments/sr_RRDB_PSNR_x4_SynomagPEG_RGB_002_archived_200602-120921/models/85000_G.pth"
+      //"pretrain_model_G": "/home/ivo/fahad/Projects/MPISystemMatrixRec/experiments/rgb_l1_poisson_08x_002_archived_200606-104910/models/300000_G.pth"
+      //"pretrain_model_G": "/home/ivo/fahad/Projects/MPISystemMatrixRec/experiments/rgb_l1_poisson_08x_002_archived_200608-001855/models/80000_G.pth"
+      //"pretrain_model_G": "/home/ivo/fahad/Projects/MPISystemMatrixRec/experiments/rgb_l1_poisson_08x_002_archived_200609-014046/models/105000_G.pth"
+      "pretrain_model_G": "/home/ivo/fahad/Projects/MPISystemMatrixRec/experiments/rgb_l1_poisson_08x_002_archived_200609-104956/models/31000_G.pth"
+    },
+    //logger config
+    "logger": {
+      "print_freq": 200,
+      "save_checkpoint_freq": 5e3
+    }
+  },
+
+   // Model parameters
+  "model_config": {
+    "network_G": {
+      "which_model_G": "RRDB_net", // RRDB_net | sr_resnet | LapSRNet | sft_arch
+      "norm_type": null, // batch | sr_resnet
+      "mode": "CNA", // CNA: Conv -> Norm -> Act | NAC: Norm -> Act --> Conv | CNAC
+      "nf": 32,
+      "nb": 7,
+      "in_nc": 3,
+      "out_nc": 3,
+      "gc": 32,
+      "group": 1
+    },
+    "model": "sr", // sr | srgan | srragan | sftgan
+    "scale": 2
+  },
+
+  // Dataset parameters
+  "data_config": {
+    "train": {
+      "name": "SynomagPEG",
+      "mode": "LRHR", //
+      "dataroot_HR": "/hdd/fhd/MPISystemMatrix/pre_processed/SynomagPEG_GT_SNR3_HR_3536x40x40x40x3_RGB.h5",
+      "dataroot_LR": "/hdd/fhd/MPISystemMatrix/pre_processed/SynomagPEG_Train_SNR3_PoissonDisk_3536x20x20x20x3_RGB.h5",
+      "data_format": "RGB", // [Complex, RGB]
+      "use_shuffle": true, // shuffle data after each epoch
+      "n_workers": 0, // number of workers to load/process data
+      "batch_size": 16, // total batch size; batch size per GPU = batch_size/NUM_GPUS
+      "HR_size": 40, // HR input size
+      "use_flip": true, // data augmentation
+      "use_rot": true // data augmentation
+      ,"data_mean": 388.72757
+      ,"data_std": 3343.308
+    },
+    "val": {
+      "name": "val_SynomagPEG",
+      "mode": "LRHR",
+      "dataroot_HR": "/hdd/fhd/MPISystemMatrix/pre_processed/SynomagPEG_GT_SNR3_HR_393x40x40x40x3_RGB.h5",
+      "dataroot_LR": "/hdd/fhd/MPISystemMatrix/pre_processed/SynomagPEG_Val_SNR3_PoissonDisk_393x20x20x20x3_RGB.h5",
+      "data_format": "RGB",
+      "batch_size": 16, // total batch size; batch size per GPU = batch_size/NUM_GPUS
+      "n_workers": 0 // number of workers to load/process data; 0 for windows
+      ,"data_mean": 388.72757
+      ,"data_std": 3343.308
+    }
+  },
+
+  // Optimizer parameters
+  "optim_config": {
+    "niter": 30e4,
+    "optim": "Adam",
+
+    "lr_G": 0.5e-5,
+    //"weight_decay_G": 1e-4,
+    "beta1_G": 0.9,
+    "beta2_G": 0.999,
+
+    "lr_scheme": "MultiStepLR"
+    , "lr_steps":[150e3]
+    //, "lr_steps":[40e3, 80e3, 120e3, 160e3]
+    , "lr_gamma": 0.5,
+
+    "pixel_criterion": "l1",
+    "pixel_weight": 1.0,
+    "val_freq": 1e3
+    }
+}

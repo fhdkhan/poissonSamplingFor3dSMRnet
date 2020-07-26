@@ -1,0 +1,100 @@
+Loading dataset: /hdd/fhd/MPISystemMatrix/Data37x37x37x3x3175Perimag_SNR3.h5
+298.40768
+1889.1442
+
+_Hz
+Data
+DataImag
+DataReal
+SNRThresh
+datadir
+maxAbs
+maxImag
+maxReal
+minAbs
+minFreq
+minImag
+minReal
+(3175, 3, 37, 37, 37)
+done
+(3175, 3, 9, 9, 9)
+mean and std
+284.93738275325614
+1843.7155932831226
+Zero pad to (10, 10, 10)
+(3175, 3, 10, 10, 10)
+done
+(3175, 3, 19, 19, 19)
+mean and std
+291.82801897310736
+1826.9170664529547
+Zero pad to (20, 20, 20)
+(3175, 3, 20, 20, 20)
+done
+Zero pad HR dataset to (40, 40, 40)
+done
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//Perimag_Train_SNR3_PoissonDisk_2857x20x20x20x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//Perimag_Train_SNR3_PoissonDisk_2857x10x10x10x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//Perimag_Val_SNR3_PoissonDisk_318x20x20x20x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//Perimag_Val_SNR3_PoissonDisk_318x10x10x10x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//Perimag_Test_SNR3_PoissonDisk_3175x20x20x20x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//Perimag_Test_SNR3_PoissonDisk_3175x10x10x10x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//Perimag_GT_SNR3_HR_2857x40x40x40x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//Perimag_Train_SNR3_Equi4x_2857x10x10x10x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//Perimag_Train_SNR3_Equi2x_2857x20x20x20x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//Perimag_GT_SNR3_HR_318x40x40x40x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//Perimag_Val_SNR3_Equi4x_318x10x10x10x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//Perimag_Val_SNR3_Equi2x_318x20x20x20x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//Perimag_GT_SNR3_HR_3175x40x40x40x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//Perimag_Test_SNR3_Equi4x_3175x10x10x10x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//Perimag_Test_SNR3_Equi2x_3175x20x20x20x3_RGB.h5
+Loading dataset: /hdd/fhd/MPISystemMatrix/Data37x37x37x3x3929SynomagPEG_SNR3.h5
+388.72757
+3343.308
+
+_Hz
+Data
+DataImag
+DataReal
+SNRThresh
+datadir
+maxAbs
+maxImag
+maxReal
+minAbs
+minFreq
+minImag
+minReal
+(3929, 3, 37, 37, 37)
+done
+(3929, 3, 9, 9, 9)
+mean and std
+370.4729665463942
+3305.2469277200753
+Zero pad to (10, 10, 10)
+(3929, 3, 10, 10, 10)
+done
+(3929, 3, 19, 19, 19)
+mean and std
+386.13148527412784
+3337.9103919423746
+Zero pad to (20, 20, 20)
+(3929, 3, 20, 20, 20)
+done
+Zero pad HR dataset to (40, 40, 40)
+done
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//SynomagPEG_Train_SNR3_PoissonDisk_3536x20x20x20x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//SynomagPEG_Train_SNR3_PoissonDisk_3536x10x10x10x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//SynomagPEG_Val_SNR3_PoissonDisk_393x20x20x20x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//SynomagPEG_Val_SNR3_PoissonDisk_393x10x10x10x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//SynomagPEG_Test_SNR3_PoissonDisk_3929x20x20x20x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//SynomagPEG_Test_SNR3_PoissonDisk_3929x10x10x10x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//SynomagPEG_GT_SNR3_HR_3536x40x40x40x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//SynomagPEG_Train_SNR3_Equi4x_3536x10x10x10x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//SynomagPEG_Train_SNR3_Equi2x_3536x20x20x20x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//SynomagPEG_GT_SNR3_HR_393x40x40x40x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//SynomagPEG_Val_SNR3_Equi4x_393x10x10x10x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//SynomagPEG_Val_SNR3_Equi2x_393x20x20x20x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//SynomagPEG_GT_SNR3_HR_3929x40x40x40x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//SynomagPEG_Test_SNR3_Equi4x_3929x10x10x10x3_RGB.h5
+Saving dataset to  /hdd/fhd/MPISystemMatrix/pre_processed//SynomagPEG_Test_SNR3_Equi2x_3929x20x20x20x3_RGB.h5
